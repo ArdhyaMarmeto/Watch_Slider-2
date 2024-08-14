@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Fold Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Splide.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+</head>
+<body class="bg-gradient-to-r" id="ambient-bg">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-4 bg-transparent bg-orange-400">
+        <div class="flex items-center space-x-2 ml-20">
+            <!-- <img src="path-to-logo" alt="Logo" class="h-8"> -->
+            <i class="fa-solid fa-crown text-3xl text-center"></i>
+            <span class=" text-3xl font-bold text-center">KING</span>
+        </div>
+        <nav class="space-x-8 text-lg inset-x-0.5">
+            <!-- <a href="#" class="hover:text-gray-700">H</a> -->
+            <a href="https://www.tissotwatches.com/en-in/" class="hover:text-gray-700">Shop</a>
+            <a href="https://www.ethoswatches.com/brands.html" class="hover:text-gray-700">Brands</a>
+            <a href="#" class="hover:text-gray-700">Contact Us</a>
+        </nav>
+        <button class="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
+    </header>
+     <!-- left section  -->
+      <div class="bg-gradient-to-r from-orange-200 via-orange-300 to-orange-400 min-h-screen flex items-center justify-center">
+        <div class="text-center p-6 bg-opacity-80 backdrop-blur-sm">
+            <h1 class="text-5xl font-bold text-white mb-4">Exquisite Watches</h1>
+            <h2 class="text-3xl text-white font-bold">Gold Luxury, <span class="text-black">Choose Us</span></h2>
+            <p class="text-lg text-white my-4">
+                Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch
+            </p>
+            <div class="text-3xl text-white font-bold mb-6">$499.00</div>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    <!-- Carousel Section -->
+    <section class="flex justify-center items-center h-screen">
+        <div id="carousel-container" class="splide w-full max-w-4xl mx-auto">
+            <div class="splide__track">
+                <ul class="splide__list" id="carousel-list">
+                    <!-- Slides will be injected here from the JSON -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Splide.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
