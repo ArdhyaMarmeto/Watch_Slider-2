@@ -20,6 +20,16 @@
   /* 2 */
 }
 
+.custom-arrow-class {
+  @apply text-xl bg-white;
+}
+.custom-prev-class {
+  @apply left-auto right-[40%] top-[40%] z-50;
+}
+.custom-next-class {
+  @apply right-[10%] top-[40%] z-50;
+}
+
 ::before,
 ::after {
   --tw-content: '';
