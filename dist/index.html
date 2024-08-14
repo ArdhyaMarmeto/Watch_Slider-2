@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Fold Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Tailwind CSS CDN -->
@@ -16,34 +16,63 @@
 
     <!-- Header -->
     <header class="flex items-center justify-between px-8 py-4 bg-transparent bg-orange-400">
-        <div class="flex items-center space-x-2 ml-20">
+        <div class="flex items-center space-x-2">
             <!-- <img src="path-to-logo" alt="Logo" class="h-8"> -->
-            <i class="fa-solid fa-crown text-3xl text-center"></i>
-            <span class=" text-3xl font-bold text-center">KING</span>
+            <i class="fa-solid fa-crown text-3xl"></i>
+            <span class="font-bold  text-3xl">KING</span>
         </div>
-        <nav class="space-x-8 text-lg inset-x-0.5">
-            <!-- <a href="#" class="hover:text-gray-700">H</a> -->
-            <a href="https://www.tissotwatches.com/en-in/" class="hover:text-gray-700">Shop</a>
-            <a href="https://www.ethoswatches.com/brands.html" class="hover:text-gray-700">Brands</a>
-            <a href="#" class="hover:text-gray-700">Contact Us</a>
+        <nav class="space-x-8 text-lg hidden md:flex ml-96">
+            <a href="https://www.tissotwatches.com/en-in/?gad_source=1&gclid=Cj0KCQjwq_G1BhCSARIsACc7NxphmqxBRpe6_PR7g5LMvNbtBZL0iGBZU2ud8OaXJrshBdZFWZICqJoaAjZsEALw_wcB" class="hover:text-gray-400 font-bold ">Shop</a>
+            <a href="https://www.helioswatchstore.com/brands" class="hover:text-gray-400 font-bold ">Brands</a>
+            <a href="https://www.watches.com/pages/contact-us?srsltid=AfmBOoq60tilvNzpQhe3SXFydOKfFqL8KKQQMH5iNI05ikNqYceVldNO" class="hover:text-gray-400 font-bold ">Contact Us</a>
         </nav>
-        <button class="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
-    </header>
-     <!-- left section  -->
-      <div class="bg-gradient-to-r from-orange-200 via-orange-300 to-orange-400 min-h-screen flex items-center justify-center">
-        <div class="text-center p-6 bg-opacity-80 backdrop-blur-sm">
-            <h1 class="text-5xl font-bold text-white mb-4">Exquisite Watches</h1>
-            <h2 class="text-3xl text-white font-bold">Gold Luxury, <span class="text-black">Choose Us</span></h2>
-            <p class="text-lg text-white my-4">
-                Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch
-            </p>
-            <div class="text-3xl text-white font-bold mb-6">$499.00</div>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+        
+        <button id="signUpButton" class="bg-black text-white py-2 px-4 rounded-lg">
+            Sign Up
+        </button>
+        <div id="signUpForm" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 hidden">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-96 relative">
+                <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
+                <form id="form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-gray-700">Password</label>
+                        <input type="password" id="password" name="password" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Submit</button>
+                        <button id="closeButton" type="button" class="text-gray-500 hover:text-gray-700">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </header>
+     <!-- left section  -->
+      <div class="bg-gradient-to-r from-orange-200 via-orange-300 to-orange-400 min-h-screen flex items-center justify-center flex-wrap md:flex-nowrap">
+        <div class="text-center p-6 bg-opacity-80 backdrop-blur-sm" id="static-content">
+            <div class="text-left w-70 mx-auto text-content-div">
+                <h1 class="text-5xl font-bold text-white mb-4" id="static-title">Exquisite Watches</h1>
+                <h2 class="text-3xl text-white font-bold" id="static-description">Gold Luxury, <span class="text-black">Choose Us</span></h2>
+                <p class="text-lg text-white my-4" id="static-detail">
+                    Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch
+                </p>
+                <div class="text-3xl text-white font-bold mb-6" id="static-price">$499.00</div>
+                <div class="flex justify-center space-x-4 mt-4 -ml-96">
+                    <a href="#" class="text-white p-3 border border-white rounded-full flex items-center justify-center w-12 h-12 transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-blue-500 hover:text-white hover:shadow-lg"><i class="fab fa-facebook-f" ></i></a>
+                    <a href="#" class="text-white p-3 border border-white rounded-full flex items-center justify-center w-12 h-12 transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-blue-300 hover:text-white hover:shadow-lg"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white p-3 border border-white rounded-full flex items-center justify-center w-12 h-12 transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-red-500 hover:text-white hover:shadow-lg"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+           
+        </div>
+        
     <!-- Carousel Section -->
     <section class="flex justify-center items-center h-screen">
         <div id="carousel-container" class="splide w-full max-w-4xl mx-auto">
