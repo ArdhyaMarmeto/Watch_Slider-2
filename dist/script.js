@@ -80,18 +80,18 @@ splide.mount();
 ambientBg.style.background = carouselData[0].ambientColor;
 updateStaticContent(0);
 
-
-
+// Show the sign-up form when the "Sign Up" button is clicked
 document.getElementById('signUpButton').addEventListener('click', function() {
     document.getElementById('signUpForm').classList.remove('hidden');
 });
 
- // Hide the sign-up form when the close icon is clicked
- document.getElementById('closeButton').addEventListener('click', function() {
+// Hide the sign-up form when the close icon is clicked
+document.getElementById('closeButton').addEventListener('click', function() {
     console.log('Close button clicked'); // Debugging line
     document.getElementById('signUpForm').classList.add('hidden');
 });
 
+// Handle form submission
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 

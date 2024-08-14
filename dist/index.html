@@ -15,7 +15,7 @@
 <body class="bg-gradient-to-r" id="ambient-bg">
 
     <!-- Header -->
-    <header class="flex items-center justify-between px-8 py-4 bg-transparent bg-orange-400">
+    <header class="flex items-center justify-between px-8 py-4 bg-transparent bg-orange-400 shadow-lg">
         <div class="flex items-center space-x-2">
             <!-- <img src="path-to-logo" alt="Logo" class="h-8"> -->
              <img src="https://week2-l2-soln.vercel.app/images/Logo.png" alt="">
@@ -47,7 +47,9 @@
                     </div>
                     <div class="flex justify-between items-center">
                         <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Submit</button>
-                        <button id="closeButton" type="button" class="text-gray-500 hover:text-gray-700">Cancel</button>
+                        <button id="closeButton" type="button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                 </form>
             </div>
