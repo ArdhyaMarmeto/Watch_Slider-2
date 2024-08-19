@@ -26,6 +26,7 @@ const carouselData = [
     }
 ];
 
+
 // Get the carousel list, body background element, and static content elements
 const carouselList = document.getElementById('carousel-list');
 const ambientBg = document.getElementById('ambient-bg');
@@ -33,6 +34,7 @@ const staticTitle = document.getElementById('static-title');
 const staticDescription = document.getElementById('static-description');
 const staticDetail = document.getElementById('static-detail');
 const staticPrice = document.getElementById('static-price');
+
 
 // Create slides dynamically
 carouselData.forEach((item) => {
