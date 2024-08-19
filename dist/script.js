@@ -53,6 +53,7 @@ const splide = new Splide('#carousel-container', {
     arrows: true
 });
 
+
 // Function to update static content based on the current slide
 function updateStaticContent(index) {
     const currentItem = carouselData[index];
@@ -64,6 +65,7 @@ function updateStaticContent(index) {
     staticPrice.innerText = currentItem.price;
 }
 
+
 // Event listener for slide changes
 splide.on('move', (newIndex) => {
     const ambientColor = carouselData[newIndex].ambientColor;
@@ -72,6 +74,7 @@ splide.on('move', (newIndex) => {
     // Update the content dynamically
     updateStaticContent(newIndex);
 });
+
 
 // Mount the Splide instance
 splide.mount();
@@ -90,6 +93,7 @@ document.getElementById('closeButton').addEventListener('click', function() {
     console.log('Close button clicked'); // Debugging line
     document.getElementById('signUpForm').classList.add('hidden');
 });
+
 
 // Handle form submission
 document.getElementById('form').addEventListener('submit', function(event) {
